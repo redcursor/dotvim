@@ -12,6 +12,10 @@ set autoindent
 set spell spelllang=en_us
 set clipboard=unnamedplus
 
+" vim master class
+set ai " auto indent
+set si " smart indent
+
 " highlight Folded guibg=white
 " hi Folded guibg=grey
 "highlight Folded ctermbg=White ctermfg=Red
@@ -32,6 +36,7 @@ colorscheme github
 
 " for dracula theme
 syntax on:
+ hi Visual cterm=none ctermbg=lightgrey ctermfg=none
 
 " Vim key mapping for emmet-vim
 " https://stackoverflow.com/questions/34822074/vim-key-mapping-for-emmet-vim
@@ -115,5 +120,19 @@ hi SpellBad    ctermfg=1      ctermbg=255     cterm=none
 
 
 " run node
-map r :w !/usr/bin/env node<cr>
-map t :r !node %<cr>
+" map r :w !/usr/bin/env node<cr>
+let mapleader=";"
+map <leader>n :w !/usr/bin/env NODE_DISABLE_COLORS=1 node<CR>
+
+map <leader>b :w !/bin/bash node<CR>
+" map t :r !node %<cr>
+map <leader>p :w !/usr/bin/env python3<CR>
+
+" useful commands and setting
+"
+" How to show vertical line to wrap the line in Vim?
+" https://stackoverflow.com/a/3787678/4643584
+" :set colorcolumn=+1        " highlight column after 'textwidth'
+" :set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
+" :highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
