@@ -13,7 +13,7 @@ set spell spelllang=en_us
 set clipboard=unnamedplus
 
 " vim master class
-set ai " auto indent
+" set ai " auto indent
 set si " smart indent
 
 " highlight Folded guibg=white
@@ -124,7 +124,7 @@ hi SpellBad    ctermfg=1      ctermbg=255     cterm=none
 let mapleader=";"
 map <leader>n :w !/usr/bin/env NODE_DISABLE_COLORS=1 node<CR>
 
-map <leader>b :w !/bin/bash node<CR>
+map <leader>b :w !/bin/bash<CR>
 " map t :r !node %<cr>
 map <leader>p :w !/usr/bin/env python3<CR>
 
@@ -136,3 +136,13 @@ map <leader>p :w !/usr/bin/env python3<CR>
 " :set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
 " :highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
+
+"""" yaml """"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" set foldlevelstart=20
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
