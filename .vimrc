@@ -14,7 +14,7 @@ set clipboard=unnamedplus
 
 " vim master class
 " set ai " auto indent
-set si " smart indent
+" set si " smart indent
 
 " highlight Folded guibg=white
 " hi Folded guibg=grey
@@ -88,6 +88,11 @@ inoremap <C-l> <c-x><c-l>
 abbr RF <React.Fragment>
 abbr RFE </React.Fragment>
 
+iabbrev <buffer> _fb ```grammar: vocabulary: notice: ``` <Esc>7bi<CR><Esc>2wi<CR><Esc>2wi<CR><Esc>2wi<CR><Esc>
+iabbrev <buffer> _iife (async function() {})();<Esc>4hi<CR><CR><Up>
+
+
+
 imap <C-up> <Esc>0i// <Esc>k0i
 imap <C-down> <Esc>0i// <Esc>j0i
 imap <A-up> <Esc>0d3lki
@@ -127,6 +132,7 @@ map <leader>n :w !/usr/bin/env NODE_DISABLE_COLORS=1 node<CR>
 map <leader>b :w !/bin/bash<CR>
 " map t :r !node %<cr>
 map <leader>p :w !/usr/bin/env python3<CR>
+map <leader>t :r !date +\%F-\%A-\%T<CR>
 
 " useful commands and setting
 "
