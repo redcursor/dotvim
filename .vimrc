@@ -12,6 +12,10 @@ set autoindent
 set spell spelllang=en_us
 set clipboard=unnamedplus
 
+" turn relative line numbers on
+set relativenumber
+set rnu
+
 " vim master class
 " set ai " auto indent
 " set si " smart indent
@@ -128,6 +132,7 @@ hi SpellBad    ctermfg=1      ctermbg=255     cterm=none
 " map r :w !/usr/bin/env node<cr>
 let mapleader=";"
 map <leader>n :w !/usr/bin/env NODE_DISABLE_COLORS=1 node<CR>
+map <leader>g :w <CR> :w !/usr/bin/env go run %<CR>
 
 map <leader>b :w !/bin/bash<CR>
 " map t :r !node %<cr>
@@ -152,3 +157,10 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
+
+
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Add set spellcapcheck= into your vimrc. This will disable the spellcheck on words that aren't capitalized after a fullstop
+" https://stackoverflow.com/a/27163476/4643584
+set spellcapcheck=
