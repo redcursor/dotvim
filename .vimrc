@@ -164,3 +164,6 @@ let g:ale_lint_on_text_changed = 'never'
 " Add set spellcapcheck= into your vimrc. This will disable the spellcheck on words that aren't capitalized after a fullstop
 " https://stackoverflow.com/a/27163476/4643584
 set spellcapcheck=
+
+:highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+:set colorcolumn=80
